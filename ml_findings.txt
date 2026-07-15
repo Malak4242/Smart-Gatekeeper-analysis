@@ -1,0 +1,31 @@
+ML feasibility analysis: predicting organic load from cheap sensors
+======================================================================
+
+Target variable: DOC (dissolved organic carbon), used as an organic
+pollution load proxy. Direct COD/BOD lab measurements were not
+available at matching timestamps with sensor readings in this dataset.
+
+Features used: lab_turbidity_ntu, lab_nh4_mg_l, lab_po4_mg_l, lab_so4_mg_l
+Training samples: 404
+Test samples: 101
+
+Performance on held-out test set (both evaluated on mg/L scale)
+------------------------------------------------------------------
+Metric          Raw-scale model    Log-transformed model
+R2                        0.133                    0.048
+RMSE                     53.220                   55.747
+MAE                      33.922                   34.171
+
+Note: DOC is right-skewed (mean 92.9, std 57.4, max 280.0 mg/L).
+The log-transformed model is trained on log(1+DOC) and is a standard
+correction for skewed environmental concentration data; both models
+are reported here on the original mg/L scale for direct comparison.
+
+Feature importance
+-------------------
+  lab_so4_mg_l: 0.303
+  lab_nh4_mg_l: 0.238
+  lab_turbidity_ntu: 0.232
+  lab_po4_mg_l: 0.227
+
+Model: Random Forest Regressor (200 trees, max depth 6)

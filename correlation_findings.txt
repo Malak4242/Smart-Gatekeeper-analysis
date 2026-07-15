@@ -1,0 +1,49 @@
+Correlation analysis findings
+=============================
+
+Dataset: Lechevallier et al. (2025)
+
+CORE group (n = 505 samples)
+----------------------------------------
+                   lab_turbidity_ntu  lab_nh4_mg_l  lab_nsol_mg_l  lab_doc_mg_l  lab_po4_mg_l  lab_so4_mg_l
+lab_turbidity_ntu               1.00          0.37           0.30          0.22          0.36          0.27
+lab_nh4_mg_l                    0.37          1.00           0.91         -0.02          0.75          0.55
+lab_nsol_mg_l                   0.30          0.91           1.00          0.02          0.78          0.55
+lab_doc_mg_l                    0.22         -0.02           0.02          1.00          0.13          0.22
+lab_po4_mg_l                    0.36          0.75           0.78          0.13          1.00          0.50
+lab_so4_mg_l                    0.27          0.55           0.55          0.22          0.50          1.00
+
+Strong pairs (|r| > 0.7, p < 0.05):
+  lab_nh4_mg_l <-> lab_nsol_mg_l: r = +0.91
+  lab_nh4_mg_l <-> lab_po4_mg_l: r = +0.75
+  lab_nsol_mg_l <-> lab_po4_mg_l: r = +0.78
+
+
+EXTENDED group (n = 40 samples)
+----------------------------------------
+                   lab_turbidity_ntu  lab_nh4_mg_l  lab_nsol_mg_l  lab_ntot_mg_l  lab_doc_mg_l  lab_toc_mg_l  lab_tss_mg_l  lab_po4_mg_l  lab_so4_mg_l
+lab_turbidity_ntu               1.00          0.63           0.52           0.48          0.26          0.37          0.97          0.55          0.46
+lab_nh4_mg_l                    0.63          1.00           0.94           0.88          0.15          0.24          0.74          0.90          0.81
+lab_nsol_mg_l                   0.52          0.94           1.00           0.91          0.13          0.17          0.62          0.87          0.83
+lab_ntot_mg_l                   0.48          0.88           0.91           1.00         -0.07          0.19          0.58          0.86          0.76
+lab_doc_mg_l                    0.26          0.15           0.13          -0.07          1.00          0.80          0.24          0.30          0.35
+lab_toc_mg_l                    0.37          0.24           0.17           0.19          0.80          1.00          0.34          0.42          0.45
+lab_tss_mg_l                    0.97          0.74           0.62           0.58          0.24          0.34          1.00          0.65          0.52
+lab_po4_mg_l                    0.55          0.90           0.87           0.86          0.30          0.42          0.65          1.00          0.81
+lab_so4_mg_l                    0.46          0.81           0.83           0.76          0.35          0.45          0.52          0.81          1.00
+
+Strong pairs (|r| > 0.7, p < 0.05):
+  lab_turbidity_ntu <-> lab_tss_mg_l: r = +0.97
+  lab_nh4_mg_l <-> lab_nsol_mg_l: r = +0.94
+  lab_nh4_mg_l <-> lab_ntot_mg_l: r = +0.88
+  lab_nh4_mg_l <-> lab_tss_mg_l: r = +0.74
+  lab_nh4_mg_l <-> lab_po4_mg_l: r = +0.90
+  lab_nh4_mg_l <-> lab_so4_mg_l: r = +0.81
+  lab_nsol_mg_l <-> lab_ntot_mg_l: r = +0.91
+  lab_nsol_mg_l <-> lab_po4_mg_l: r = +0.87
+  lab_nsol_mg_l <-> lab_so4_mg_l: r = +0.83
+  lab_ntot_mg_l <-> lab_po4_mg_l: r = +0.86
+  lab_ntot_mg_l <-> lab_so4_mg_l: r = +0.76
+  lab_doc_mg_l <-> lab_toc_mg_l: r = +0.80
+  lab_po4_mg_l <-> lab_so4_mg_l: r = +0.81
+
