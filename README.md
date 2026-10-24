@@ -59,3 +59,7 @@ Each script will print results to the console and save output figures (`.png`) a
 ## Context
 
 This code supports the Results section of the paper *"AIoT-GIS Environmental Decision Support System for Real-Time Industrial Wastewater Compliance Monitoring: A Case Study of the Lake Qarun Basin"* (Ahmed & Khafagy). The correlation analysis validates sensor redundancy assumptions used to justify the reduced sensor set in the proposed system architecture; the ML feasibility analysis evaluates whether organic pollution load can be estimated from low-cost sensors in place of costly COD/BOD lab testing.
+
+
+## Soft-sensor analysis (COD/BOD)
+See [`soft_sensor/`](soft_sensor/README.md) for the chronological-validation robustness check and the variable-importance analysis on the essential-oil WRRF subsample (Hassnain et al., 2025).
