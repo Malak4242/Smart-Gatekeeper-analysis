@@ -1,0 +1,17 @@
+check,value
+validation: shuffled 5-fold CV,0.9743000403981888
+validation: contiguous-block 5-fold CV,0.938370019297665
+validation: final 15% chronological holdout,0.9240239991388979
+ablation: R2 loss when 'F-COD (mg/L)' removed,0.0008099640593801638
+ablation: R2 loss when 'F-SS (mg/L)' removed,0.021733762030850312
+ablation: R2 loss when 'Flow-Recycle (L/s)' removed,0.01046652288372707
+ablation: R2 loss when 'F-TKN (mg/L)' removed,0.0015380197218647362
+ablation: R2 loss when 'F-NO3 (mg/L)' removed,0.002135895087748363
+ablation: R2 loss when 'SRT (days)' removed,0.0025068734462571074
+ablation: R2 loss when 'Flow (L/s)' removed,0.0010527183795926431
+ablation: R2 loss when 'Flow-Aeration (L/s)' removed,0.003036169064629668
+ablation: R2 loss when 'DO (mg/L)' removed,-0.00048424743968511486
+ablation: R2 loss when 'F-PH' removed,0.005278011929755078
+ablation: R2 loss when 'Temperature (C)' removed,0.005758820950705346
+online-only inputs (7): holdout R2,0.9271966832927433
+online-only inputs: names,Flow-Recycle (L/s); SRT (days); Flow (L/s); Flow-Aeration (L/s); DO (mg/L); F-PH; Temperature (C)
