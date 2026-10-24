@@ -11,6 +11,9 @@ https://doi.org/10.5281/zenodo.16784954. Download `ActualData_Subsample.xlsx` an
 | `robustness_check.py` | Extra Trees, all 11 variables: shuffled 5-fold CV vs contiguous-block CV vs final 15% chronological holdout; drop-one ablation; online-only (7 inputs) model. Writes `robustness_results.csv`. |
 | `feature_importance_figure.py` | Random Forest COD and BOD (direct) with all ten non-target variables; permutation importance (30 repeats) on the final 15% chronological test set, plus Spearman rho. Writes `feature_importance.png/.pdf/.csv`. |
 
+| `bod_cod_two_stage.ipynb` | Main experiment (Colab; upload the xlsx when prompted): seven models, chronological split, direct (A) vs two-stage (B) vs oracle BOD, six-fold rolling-origin validation. The notebook's optional permutation-importance/SHAP cells are not the paper's importance result; use `feature_importance_figure.py`. |
+| `paper_fig.py` | Predicted-vs-observed figure (Figure 7): `python paper_fig.py path/to/ActualData_Subsample.xlsx`. |
+
 ```
 pip install pandas numpy scikit-learn scipy matplotlib openpyxl
 python robustness_check.py path/to/ActualData_Subsample.xlsx
